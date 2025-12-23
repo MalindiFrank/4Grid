@@ -1,0 +1,126 @@
+/* Reset & Base */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family: system-ui, sans-serif;
+    background:#3b2f2f;           /* Deep warm brown */
+    color:#f5e9dc;                /* Creamy text */
+    line-height:1.5;
+}
+
+/* Header - a9k2mpx7 */
+.a9k2mpx7 {
+    background:#4a3428;           /* Dark chocolate brown */
+    padding:1.5rem;               /* More spacious */
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:1.5rem;
+    border-bottom:3px solid #8b5a2b; /* Vibrant bronze line */
+}
+
+.w4z9hjy6 { background:none; border:none; cursor:pointer; }
+.w4z9hjy6 h1 {
+    font-size:2rem;
+    color:#d78a42;                /* Vibrant warm orange-brown */
+    font-weight:700;
+}
+
+.r5t1byc0 { display:flex; gap:1rem; align-items:center; flex-wrap:wrap; }
+.r5t1byc0 button {
+    background:#7a4f2e;           /* Medium caramel brown */
+    color:#f5e9dc;
+    border:none;
+    padding:0.6rem 1.2rem;
+    cursor:pointer;
+    transition:0.2s;
+}
+.r5t1byc0 button:hover {
+    background:#a66a42;           /* Brighter caramel hover */
+}
+
+.u3v7hgz1 { font-size:0.875rem; color:#d2b39a; }
+
+/* Cards - c9xbpkd3 */
+.c9xbpkd3 {
+    background:#4a3528;           /* Dark roasted brown */
+    margin:2rem auto;
+    border-radius:0.5rem;         /* Slightly tighter */
+    padding:2rem;
+    width:90%;
+    max-width:1100px;
+    box-shadow:0 5px 12px rgba(0,0,0,0.4);
+}
+
+/* Panels - m4zqwt9f */
+.m4zqwt9f {
+    margin-bottom:2rem;
+}
+
+/* Hidden - z4tqhv8n */
+.z4tqhv8n { display:none; }
+
+/* Panel Header - k6tbvy2c */
+.k6tbvy2c {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:1.2rem;
+    margin-bottom:1.25rem;
+    padding-bottom:1rem;
+    border-bottom:2px solid #8b5a2b; /* Bronze */
+}
+.k6tbvy2c h2 {
+    font-size:1.6rem;
+    color:#e6c39f;                /* Lighter warm gold */
+}
+
+/* Controls - d1f9hjx5 */
+.d1f9hjx5 {
+    display:flex;
+    gap:0.75rem;
+    flex-wrap:wrap;
+}
+.d1f9hjx5 input,
+.d1f9hjx5 select {
+    background:#6a4a32;           /* Medium coffee brown */
+    border:none;
+    padding:0.6rem 0.9rem;
+    color:#f5e9dc;
+}
+.d1f9hjx5 input::placeholder {
+    color:#e0c8b0;
+}
+
+/* Link-style button - f8wcgy1q */
+.f8wcgy1q {
+    background:none;
+    border:none;
+    color:#d78a42;                /* Bronze text */
+    cursor:pointer;
+    font-size:1rem;
+}
+.f8wcgy1q:hover { color:#f2b06a; }
+
+/* Card List - g7pnlc4r */
+.g7pnlc4r {
+    display:grid;
+    gap:1.5rem;
+    margin-top:1.5rem;
+}
+
+/* Layout upgrade: more columns on larger screens */
+@media (min-width:640px) { .g7pnlc4r { grid-template-columns: repeat(2,1fr); } }
+@media (min-width:1024px) { .g7pnlc4r { grid-template-columns: repeat(3,1fr); } }
+@media (min-width:1400px) { .g7pnlc4r { grid-template-columns: repeat(4,1fr); } }
+
+/* Schedule Container - p1x9hgy6 */
+.p1x9hgy6 ul { list-style:none; }
+.p1x9hgy6 li {
+    background:#6a4a32;           /* Coffee brown */
+    margin-bottom:0.75rem;
+    padding:1rem;
+    border-radius:0.5rem;
+    border-left:4px solid #d78a42; /* Highlight stripe */
+}
