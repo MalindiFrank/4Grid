@@ -223,8 +223,7 @@ public class PlaceNameService implements Runnable {
         p.setProperty( CFG_CONFIG_FILE, System.getProperty( "user.dir" ) + "/places.properties" );
         p.setProperty( CFG_DATA_DIR, System.getProperty( "user.dir" ));
         System.out.println("User dir: " + System.getProperty( "user.dir" ));
-        p.setProperty( CFG_DATA_FILE, System.getProperty( "user.dir" ) + "/places.csv" );
-//        p.setProperty( CFG_DATA_FILE, System.getProperty( "user.dir" ) + "/places/resources/PlaceNamesZA2008.csv" );
+        p.setProperty( CFG_DATA_FILE, System.getProperty( "user.dir" ) + "/resources/PlaceNamesZA2008.csv" );
         p.setProperty(CFG_SERVICE_PORT, Integer.toString(DEFAULT_PORT ));
         return p;
     }
