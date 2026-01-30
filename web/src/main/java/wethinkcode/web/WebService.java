@@ -60,6 +60,7 @@ public class WebService implements MessageListener {
     private ScheduledExecutorService healthCheckScheduler;
     private final AtomicBoolean placesAvailable = new AtomicBoolean(true);
     private final AtomicBoolean scheduleAvailable = new AtomicBoolean(true);
+    private final AtomicBoolean stagesAvailable = new AtomicBoolean(true);
 
 
     public static void main(String[] args) {
@@ -292,6 +293,7 @@ public class WebService implements MessageListener {
         healthCheckScheduler.schedule(() -> {
             probePlacesService();
             probeScheduleService();
+            probeStageService();
         }, 0, TimeUnit.SECONDS);
 
         // then schedule regular checks
@@ -310,6 +312,33 @@ public class WebService implements MessageListener {
                 LOG.log(Level.WARNING, "Unhandled error in schedule health-check", t);
             }
         }, 5, 5, TimeUnit.SECONDS);
+
+        healthCheckScheduler.scheduleAtFixedRate(() -> {
+            try {
+                probeStageService();
+            } catch (Throwable t) {
+                LOG.log(Level.WARNING, "Unhandled error in schedule health-check", t);
+            }
+        }, 5, 5, TimeUnit.SECONDS);
+    }
+
+    private void probeStageService() {
+        boolean wasUp = stagesAvailable.get();
+        try {
+            // perform a quick request; any successful response indicates the service is reachable
+            client.get(STAGE_URL + "/stage").asString();
+            if (!wasUp) {
+                // recovered
+                LOG.log(Level.INFO, "Stage service at {0} has recovered", STAGE_URL);
+            }
+            stagesAvailable.set(true);
+        } catch (Exception e) {
+            if (wasUp) {
+                LOG.log(Level.WARNING, "Stage service appears down", e);
+                sendAlert(String.format("WebService: Unable to contact Stage service at %s: %s", STAGE_URL, e.getMessage()), e);
+            }
+            stagesAvailable.set(false);
+        }
     }
 
     private void probePlacesService() {
