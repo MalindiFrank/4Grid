@@ -2,14 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>wethinkcode</groupId>
+        <groupId>za.co.fourgrid</groupId>
         <artifactId>fourgrid</artifactId>
         <version>1.0</version>
     </parent>
-    <artifactId>places</artifactId>
+    <artifactId>fourgrid-places</artifactId>
     <packaging>jar</packaging>
     <properties>
-        <exec.mainClass>wethinkcode.places.Places</exec.mainClass>
+        <exec.mainClass>za.co.fourgrid.places.Places</exec.mainClass>
     </properties>
     <dependencies>
         <dependency>

@@ -2,11 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>wethinkcode</groupId>
+        <groupId>za.co.fourgrid</groupId>
         <artifactId>fourgrid</artifactId>
         <version>1.0</version>
     </parent>
-    <artifactId>web</artifactId>
+    <artifactId>fourgrid-web</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
@@ -54,17 +54,17 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>stage</artifactId>
+            <artifactId>fourgrid-stage</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>places</artifactId>
+            <artifactId>fourgrid-places</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>schedule</artifactId>
+            <artifactId>fourgrid-schedule</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>wethinkcode</groupId>
+    <groupId>za.co.fourgrid</groupId>
     <artifactId>fourgrid</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
     <modules>
-        <module>places</module>
-        <module>stage</module>
-        <module>schedule</module>
-        <module>web</module>
         <module>common</module>
-        <module>alert</module>
+        <module>places-service</module>
+        <module>stage-service</module>
+        <module>schedule-service</module>
+        <module>web-service</module>
+        <module>alert-service</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
