@@ -26,7 +26,7 @@ public class PlaceNameApiTest
     @BeforeAll
     public static void startServer() throws IOException{
         try(
-            final LineNumberReader input = new LineNumberReader( new StringReader( PlacesTestData.CSV_DATA ) ); ){
+            final LineNumberReader input = new LineNumberReader( new StringReader( PlacesTestData.CSV_DATA ) )){
             final PlacesCsvParser parser = new PlacesCsvParser();
             final Places testDb = parser.parseDataLines( input );
             server = new PlaceNameService().initialise( testDb );
