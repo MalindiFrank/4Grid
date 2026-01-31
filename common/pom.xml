@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>wethinkcode</groupId>
-        <artifactId>loadshed</artifactId>
+        <artifactId>fourgrid</artifactId>
         <version>1.0</version>
     </parent>
     <artifactId>common</artifactId>
@@ -37,7 +37,7 @@
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
-            <version>2.20.0</version>
+            <version>2.25.3</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>

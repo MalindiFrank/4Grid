@@ -26,11 +26,14 @@ cd 4Grid
 ### **2. Start ActiveMQ**
 
 4Grid relies on ActiveMQ for asynchronous messaging between services.
-
 Start ActiveMQ using your local installation:
 
 ```bash
 activemq start
+```
+OR
+```bash
+activemq console
 ```
 
 By default, ActiveMQ runs on:
@@ -44,10 +47,10 @@ Ensure the broker is running before starting any services.
 
 ### **3. Build Shared Components**
 
-The `4grid-common` module must be built first, as it is shared across services.
+The `common` module must be built first, as it is shared across services.
 
 ```bash
-cd 4grid-common
+cd common
 mvn clean install
 ```
 
@@ -61,36 +64,46 @@ Open **separate terminal windows** for each service.
 #### **Stage Service**
 
 ```bash
-cd 4grid-stage-service
-mvn clean compile exec:java
+cd stage-service
+mvn clean compile exec:java -Dexec.mainClass=za.co.fourgrid.StageService
+
+```
+
+#### **Place-Name Service**
+
+```bash
+cd places-service
+mvn clean compile exec:java -Dexec.mainClass=za.co.fourgrid.PlaceNameService
+
 ```
 
 #### **Schedule Service**
 
 ```bash
-cd 4grid-schedule-service
-mvn clean compile exec:java
+cd schedule-service
+mvn clean compile exec:java -Dexec.mainClass=za.co.fourgrid.ScheduleService
+
 ```
 
 #### **Alert Service**
 
 ```bash
-cd 4grid-alert-service
-mvn clean compile exec:java
-```
+cd alert-service
+mvn clean compile exec:java -Dexec.mainClass=za.co.fourgrid.alerts.AlertService
 
----
+```
 
 ### **5. Start the Web Service**
 
 ```bash
-cd 4grid-web-service
-mvn clean compile exec:java
+cd web-service
+mvn clean compile exec:java -Dexec.mainClass=za.co.fourgrid.WebService
+
 ```
 
 Once running, the web service will:
 
-* Aggregate data from backend services
+* Receive data from backend services
 * Serve the web UI
 * Expose frontend-facing APIs
 
@@ -101,11 +114,11 @@ Once running, the web service will:
 You can verify that the system is running by:
 
 * Querying REST endpoints exposed by the services
-* Triggering a stage change in `4grid-stage-service`
+* Triggering a stage change in `stage-service`
 * Observing:
 
   * Messages published to ActiveMQ topics
-  * Alerts consumed by `4grid-alert-service`
+  * Alerts consumed by `alert-service`
   * Updated state reflected in the web interface
 
 ---
@@ -113,16 +126,17 @@ You can verify that the system is running by:
 ### **Startup Order (Recommended)**
 
 1. ActiveMQ
-2. `4grid-common`
-3. `4grid-stage-service`
-4. `4grid-schedule-service`
-5. `4grid-alert-service`
-6. `4grid-web-service`
+2. `common`
+3. `stage-service`
+4. `schedule-service`
+5. `alert-service`
+6. `web-service`
 
 ---
 
 ### **Notes**
 
+* Download ActiveMQ from their website to utilize message-queues 
 * Services are intentionally run independently to reflect real-world distributed systems.
 * No containers or orchestration tools are required for local development.
 * Configuration values (ports, broker URLs) can be adjusted via each service’s configuration files if needed.

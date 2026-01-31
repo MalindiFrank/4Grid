@@ -2,7 +2,7 @@
 
 # **4Grid**
 
-### Distributed Load Shedding & Grid State Management System
+### Distributed Load Shedding System
 
 ---
 
@@ -11,7 +11,6 @@
 **4Grid** is a distributed, service-oriented backend system built in **Java** to manage load shedding stages, schedules, and alerts.
 
 The system uses **REST APIs** and **asynchronous messaging** to coordinate state across independent services and expose grid information to a web interface.
-
 This project emphasizes **system design**, **inter-service communication**, and **event-driven architecture**, rather than simple CRUD-based workflows.
 
 ---
@@ -42,31 +41,14 @@ This approach enables scalability, resilience, and independent service evolution
 ## **System Architecture (Conceptual)**
 
 ```
-+---------------------+
-| 4grid-stage-service |
-+---------------------+
-           |
-           |  (Stage Update Event)
-           v
-   [ Message Topic ]
-           |
-   +---------------------+
-   | 4grid-alert-service |
-   +---------------------+
 
-+------------------------+        +---------------------+
-| 4grid-schedule-service | <----> | 4grid-web-service   |
-+------------------------+        +---------------------+
-                                           |
-                                           v
-                                      Web Frontend
 ```
 
 ---
 
 ## **Core Components**
 
-### **4grid-stage-service**
+### **stage-service**
 
 * Maintains the **current load shedding stage**
 * Acts as the **source of truth** for grid stage state
@@ -74,7 +56,7 @@ This approach enables scalability, resilience, and independent service evolution
 
 ---
 
-### **4grid-schedule-service**
+### **schedule-service**
 
 * Provides load shedding schedules per **province and area**
 * Exposes schedules via REST APIs
@@ -82,7 +64,7 @@ This approach enables scalability, resilience, and independent service evolution
 
 ---
 
-### **4grid-alert-service**
+### **alert-service**
 
 * Subscribes to stage update events
 * Generates alerts when load shedding stages change
@@ -90,7 +72,7 @@ This approach enables scalability, resilience, and independent service evolution
 
 ---
 
-### **4grid-web-service**
+### **web-service**
 
 * Aggregates data from backend services
 * Exposes a simplified API for the frontend
@@ -98,7 +80,7 @@ This approach enables scalability, resilience, and independent service evolution
 
 ---
 
-### **4grid-common**
+### **common**
 
 * Shared **Data Transfer Objects (DTOs)**
 * Messaging utilities and communication contracts
@@ -130,6 +112,6 @@ Services communicate exclusively through **well-defined contracts**, avoiding ti
 * Separation of concerns
 * Scalability and resilience by design
 
-This architecture mirrors real-world distributed systems commonly found in enterprise and cloud-based environments.
+This architecture mirrors distributed systems commonly found in enterprise and cloud-based environments.
 
 ---
