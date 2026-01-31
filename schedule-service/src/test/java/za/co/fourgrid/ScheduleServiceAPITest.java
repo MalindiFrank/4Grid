@@ -8,7 +8,6 @@ import kong.unirest.HttpResponse;
 import kong.unirest.HttpStatus;
 import kong.unirest.Unirest;
 import org.junit.jupiter.api.*;
-import wethinkcode.loadshed.common.mq.test.NullTopicReceiver;
 import za.co.fourgrid.common.transfer.ScheduleDO;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -20,7 +19,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ScheduleServiceAPITest
 {
     public static final int TEST_PORT = 8888;
-
     private static ScheduleService testSvc;
 
     @BeforeAll
@@ -33,7 +31,7 @@ public class ScheduleServiceAPITest
 
     @BeforeAll
     public static void initTestScheduleFixture(){
-        testSvc = new ScheduleService().initialise(new NullTopicReceiver());
+        testSvc = new ScheduleService().initialise();
         testSvc.start( TEST_PORT );
     }
 

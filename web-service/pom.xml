@@ -21,14 +21,13 @@
         <dependency>
             <groupId>com.konghq</groupId>
             <artifactId>unirest-java</artifactId>
-            <version>3.13.10</version>
+            <version>3.13.11</version>
             <type>jar</type>
         </dependency>
         <dependency>
             <groupId>com.konghq</groupId>
             <artifactId>unirest-objectmapper-jackson</artifactId>
-            <version>4.2.9</version>
-            <scope>compile</scope>
+            <version>3.13.11</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson</groupId>
@@ -65,7 +64,7 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>fourgrid-schedule</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.activemq</groupId>

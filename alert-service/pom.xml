@@ -8,15 +8,15 @@
         <artifactId>fourgrid</artifactId>
         <version>1.0</version>
     </parent>
-    <artifactId>alert</artifactId>
+    <artifactId>fourgrid-alert</artifactId>
     <properties>
         <exec.mainClass>za.co.fourgrid.alerts.AlertService</exec.mainClass>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
         <dependency>
-            <groupId>wethinkcode</groupId>
-            <artifactId>common</artifactId>
+            <groupId>za.co.fourgrid</groupId>
+            <artifactId>fourgrid-common</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>

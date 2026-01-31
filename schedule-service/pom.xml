@@ -7,7 +7,7 @@
         <version>1.0</version>
     </parent>
     <artifactId>fourgrid-schedule</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
         <exec.mainClass>za.co.fourgrid.ScheduleService</exec.mainClass>
@@ -26,8 +26,7 @@
         <dependency>
             <groupId>com.konghq</groupId>
             <artifactId>unirest-objectmapper-jackson</artifactId>
-            <version>4.2.9</version>
-            <scope>compile</scope>
+            <version>3.13.11</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson</groupId>
@@ -36,10 +35,9 @@
             <type>pom</type>
         </dependency>
         <dependency>
-            <groupId>tools.jackson.datatype</groupId>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
-            <version>3.0.0-rc2</version>
-            <scope>compile</scope>
+            <version>2.13.3</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>

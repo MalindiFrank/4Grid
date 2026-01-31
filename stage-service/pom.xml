@@ -31,7 +31,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>fourgrid-common</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -56,7 +56,6 @@
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.36</version>
         </dependency>
-
 
     </dependencies>
     <build>

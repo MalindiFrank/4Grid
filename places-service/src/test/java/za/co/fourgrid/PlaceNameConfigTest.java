@@ -39,7 +39,7 @@ public class PlaceNameConfigTest
         assertThat( svc.getConfig( PlaceNameService.CFG_DATA_DIR ))
             .isEqualTo( defaultDir );
         assertThat( svc.getConfig( PlaceNameService.CFG_DATA_FILE ))
-            .isEqualTo( defaultDir + "/places.csv" );
+            .isEqualTo( defaultDir + "/resources/PlaceNamesZA2008.csv" );
     }
 
     @Test

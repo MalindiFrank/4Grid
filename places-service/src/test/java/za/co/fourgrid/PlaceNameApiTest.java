@@ -12,8 +12,7 @@ import kong.unirest.json.JSONArray;
 import org.junit.jupiter.api.*;
 import za.co.fourgrid.model.Places;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * *Functional* tests of the PlaceNameService.
@@ -54,12 +53,13 @@ public class PlaceNameApiTest
     @Test
     public void getTownsInAProvince_provinceExistsInDb(){
         HttpResponse<JsonNode> response = Unirest.get( serverUrl() + "/towns/KwaZulu-Natal" ).asJson();
-
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@");
+        System.out.println(response);
         assertEquals( HttpStatus.OK, response.getStatus() );
         assertEquals( "application/json", response.getHeaders().getFirst( "Content-Type" ) );
 
         JSONArray jsonArray = response.getBody().getArray();
-        assertTrue( jsonArray.length() > 0 );
+        assertFalse(jsonArray.isEmpty());
 
     }
 
