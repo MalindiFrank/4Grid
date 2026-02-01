@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="common_lib" />
+      <option name="name" value="Project library" />
+      <option name="url" value="file:////home/frank/Desktop/4Grid/stage/common" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="common_lib" />
+      <option name="name" value="Project library" />
+      <option name="url" value="file:////home/frank/Desktop/4Grid/places/common" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="common_lib" />
+      <option name="name" value="Project library" />
+      <option name="url" value="file:////home/frank/Desktop/4Grid/stage-service/common" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="common_lib" />
+      <option name="name" value="Project library" />
+      <option name="url" value="file:////home/frank/Desktop/4Grid/alert/common" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="common_lib" />
+      <option name="name" value="Project library" />
+      <option name="url" value="file:////home/frank/Desktop/4Grid/schedule-service/common" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="common_lib" />
+      <option name="name" value="Project library" />
+      <option name="url" value="file:////home/frank/Desktop/4Grid/schedule/common" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="common_lib" />
+      <option name="name" value="Project library" />
+      <option name="url" value="file:////home/frank/Desktop/4Grid/common/common" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="common_lib" />
+      <option name="name" value="Project library" />
+      <option name="url" value="file:////home/frank/Desktop/4Grid/places-service/common" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="common_lib" />
+      <option name="name" value="Project library" />
+      <option name="url" value="file:////home/frank/Desktop/4Grid/web-service/common" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="common_lib" />
+      <option name="name" value="Project library" />
+      <option name="url" value="file:////home/frank/Desktop/4Grid/common" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="common_lib" />
+      <option name="name" value="Project library" />
+      <option name="url" value="file:////home/frank/Desktop/4Grid/alert-service/common" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="common_lib" />
+      <option name="name" value="Project library" />
+      <option name="url" value="file:////home/frank/Desktop/4Grid/web/common" />
+    </remote-repository>
+  </component>
+</project>
